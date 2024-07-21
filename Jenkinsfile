@@ -14,11 +14,8 @@ pipeline {
         stage('Run Docker Compose') {
             steps {
                 script {
-                    // Navigate to the directory containing docker-compose.yml
-                    dir('path/to/docker-compose-directory') {
-                        // Run Docker Compose commands
-                        sh 'docker-compose docker-compose.yml up -d'
-                    }
+                    // Run Docker Compose commands in the root directory
+                    sh 'docker-compose docker-compose.yml up -d'
                 }
             }
         }
