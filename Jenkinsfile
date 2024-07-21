@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git credentialsId: env.GIT_CREDENTIALS_ID, url: 'https://github.com/Ishan-Bharti/ishan-demo.repo'
+                git credentialsId: env.GIT_CREDENTIALS_ID, url: 'https://github.com/Ishan-Bharti/ishan-demo.repo', branch: 'main'
             }
         }
         stage('Run Docker Compose') {
